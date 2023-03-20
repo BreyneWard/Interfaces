@@ -40,7 +40,7 @@ namespace _30._1_
         private void Bereken(InterfaceObject berekening)
         {
 
-            MessageBox.Show(berekening.ToString(), "result",MessageBoxButton.OK, MessageBoxImage.Information); ;
+            MessageBox.Show(berekening.ToString(), "Result",MessageBoxButton.OK, MessageBoxImage.Information); ;
         }
 
 
