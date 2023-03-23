@@ -8,9 +8,10 @@ namespace _30._2_
 {
     class UurWerker:Werknemer
     {
-        public UurWerker(string achternaam, string voornaam, decimal verdiensten, int aantal, string werknemerType)
-        : base(achternaam, voornaam, verdiensten, aantal, "Uurwerker")
+         public UurWerker(string achternaam, string voornaam, decimal verdiensten, int aantal, int commissie)
+        : base( achternaam, voornaam,  verdiensten,  aantal, commissie, "Uurwerker")
         {
+            
         }
     }
 }

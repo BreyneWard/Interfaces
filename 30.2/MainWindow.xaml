@@ -37,11 +37,11 @@
         <TextBlock Grid.Column="0" Grid.Row="3" Text="Verdiensten: " FontSize="20" Margin="10"/>
         <TextBlock Grid.Column="0" Grid.Row="4" Text="Aantal: " FontSize="20" Margin="10"/>
         <TextBlock Grid.Column="0" Grid.Row="5" Text="Commissie: " FontSize="20" Margin="10"/>
-        <TextBox Name="tbAchternaam" Grid.Column="1" Grid.Row="1" FontSize="10" BorderBrush="#FF424C6A" Margin="10" />
-        <TextBox Name="tbVoornaam" Grid.Column="1" Grid.Row="2" FontSize="10" BorderBrush="#FF424C6A" Margin="10" />
-        <TextBox Name="tbVerdiensten" Grid.Column="1" Grid.Row="3" FontSize="10" BorderBrush="#FF424C6A" Margin="10" />
-        <TextBox Name="tbAantal" Grid.Column="1" Grid.Row="4" FontSize="10" BorderBrush="#FF424C6A" Margin="10" />
-        <TextBox Name="tbCommissie" Grid.Column="1" Grid.Row="5" FontSize="10" BorderBrush="#FF424C6A" Margin="10" />
+        <TextBox Name="tbAchternaam" Grid.Column="1" Grid.Row="1" FontSize="20" BorderBrush="#FF424C6A" Margin="10" />
+        <TextBox Name="tbVoornaam" Grid.Column="1" Grid.Row="2" FontSize="20" BorderBrush="#FF424C6A" Margin="10" />
+        <TextBox Name="tbVerdiensten" Grid.Column="1" Grid.Row="3" FontSize="20" BorderBrush="#FF424C6A" Margin="10" />
+        <TextBox Name="tbAantal" Grid.Column="1" Grid.Row="4" FontSize="20" BorderBrush="#FF424C6A" Margin="10" />
+        <TextBox Name="tbCommissie" Grid.Column="1" Grid.Row="5" FontSize="20" BorderBrush="#FF424C6A" Margin="10" />
         
         <Button Grid.Column="2" Grid.Row="1" Name="btnToevoegen" Content="Toevoegen" Margin="20" FontSize="20" Click="btnToevoegen_Click"/>
         <Button Grid.Column="2" Grid.Row="2" Name="btnVerwijderen" Content="Verwijderen" Margin="20" FontSize="20" Click="btnVerwijderen_Click"/>
@@ -50,7 +50,7 @@
         <ListView FontSize="10" Name="tbResultVerdiensten" Grid.Row="3" Grid.Column="2" BorderBrush="White" HorizontalAlignment="Left" Margin="20"/>-->
         
         
-        <ListView FontSize="10" Name="lvDisplayWerknemer" Grid.Row="6" Grid.ColumnSpan="3" BorderBrush="Gray" HorizontalAlignment="Stretch" SelectionMode="Single" Margin="10"/>
+        <ListView FontSize="20" Name="lvDisplayWerknemer" Grid.Row="6" Grid.ColumnSpan="3" BorderBrush="Gray" HorizontalAlignment="Stretch" SelectionMode="Single" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.RowSpan="3">
             <RadioButton x:Name="rbtnSortByNaam" Content="volgens Naam" FontSize="20" Grid.Row="7" Grid.ColumnSpan="3" Margin="5"/>
             <RadioButton x:Name="rbtnSortByVerdiensten" Content="volgens Verdiensten" FontSize="20" Grid.Row="7" Grid.ColumnSpan="3" Margin="5"/>

@@ -40,15 +40,27 @@ namespace _30._2_
         private void btnToevoegen_Click(object sender, RoutedEventArgs e)
         {
             //Creer werknemer object en voeg toe aan werknemerList
-            Werknemer w = new Werknemer(tbAchternaam.Text, tbVoornaam.Text, decimal.Parse(tbVerdiensten.Text, CultureInfo.InvariantCulture),int.Parse(tbAantal.Text), "");
+            //Werknemer w = new Werknemer(tbAchternaam.Text, tbVoornaam.Text, decimal.Parse(tbVerdiensten.Text, CultureInfo.InvariantCulture),int.Parse(tbAantal.Text), "");
             CheckTypeOfWerknemer();
             if (typeOfEmployee == "commission")
             {
-                CommissieWerker a = new CommissieWerker(tbAchternaam.Text, tbVoornaam.Text, decimal.Parse(tbVerdiensten.Text, CultureInfo.InvariantCulture), int.Parse(tbAantal.Text), "");
+                CommissieWerker a = new CommissieWerker(tbAchternaam.Text, tbVoornaam.Text, decimal.Parse(tbVerdiensten.Text, CultureInfo.InvariantCulture), int.Parse(tbAantal.Text), int.Parse(tbCommissie.Text));
+                werknemerList.Add(a);
+                
+            }else if (typeOfEmployee== "uur")
+            {
+                UurWerker a = new UurWerker(tbAchternaam.Text, tbVoornaam.Text, decimal.Parse(tbVerdiensten.Text, CultureInfo.InvariantCulture), int.Parse(tbAantal.Text), int.Parse(tbCommissie.Text));
+                werknemerList.Add(a);
             }
-            werknemerList.Add(w);
-            lvDisplayWerknemer.Items.Add(w.GetDisplayText("\t"));
+            else if (typeOfEmployee == "stuk")
+            {
+                StukWerker a = new StukWerker(tbAchternaam.Text, tbVoornaam.Text, decimal.Parse(tbVerdiensten.Text, CultureInfo.InvariantCulture), int.Parse(tbAantal.Text), int.Parse(tbCommissie.Text));
+                werknemerList.Add(a);
+            }
+            //werknemerList.Add(w);
+            //lvDisplayWerknemer.Items.Add(a.GetDisplayText("\t"));
             // Maak na toevoegen de invoervelden leeg
+            lvDisplayWerknemer.Items.Add(werknemerList.Last().GetDisplayText("\t"));
             ClearInputFields();
         }
 
@@ -101,7 +113,10 @@ namespace _30._2_
             tbAchternaam.Text = string.Empty;
             tbVoornaam.Text = string.Empty;
             tbVerdiensten.Text = string.Empty;
+            tbAantal.Text = string.Empty;
+            tbCommissie.Text = string.Empty;
             tbAchternaam.Focus();
+            
         }
 
         private void btnVerwijderen_Click(object sender, RoutedEventArgs e)
@@ -179,17 +194,18 @@ namespace _30._2_
 
         private void rbtnCommissiewerker_Checked(object sender, RoutedEventArgs e)
         {
-
+            //MessageBox.Show("commisiewerker");
         }
 
         private void rbtnStukwerker_Checked(object sender, RoutedEventArgs e)
         {
+            //MessageBox.Show("stukwerker");
 
         }
 
         private void rbtnUurwerker_Checked(object sender, RoutedEventArgs e)
         {
-
+            //MessageBox.Show("uurwerker");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e) { }

@@ -8,6 +8,16 @@ namespace _30._2_
 {
     internal class Werknemer
     {
+
+        private int _commissie;
+
+        public int Commissie
+        {
+            get { return _commissie; }
+            set { _commissie = value; }
+        }
+
+
         private int _aantal;
 
         public int Aantal
@@ -43,20 +53,22 @@ namespace _30._2_
 
 
         public Werknemer() { }
-        public Werknemer(string achternaam, string voornaam, decimal verdiensten, int aantal, string werknemerType)
+        public Werknemer(string achternaam, string voornaam, decimal verdiensten, int aantal, int commissie, string werknemertype)
         {
 
             Achternaam = achternaam;
             Voornaam = voornaam;
             Verdiensten = verdiensten;
             Aantal = aantal;
-            WerknemerType = werknemerType;
+            Commissie = commissie;
+            WerknemerType = werknemertype;
+            
         }
 
         public string GetDisplayText(string sep)
         {
             return Achternaam + sep + Voornaam + sep +
-            Verdiensten.ToString("0.00") + Environment.NewLine;
+            Verdiensten.ToString("0.00") + sep + WerknemerType + Environment.NewLine;
         }
         //method overloading
         public string GetDisplayText()
