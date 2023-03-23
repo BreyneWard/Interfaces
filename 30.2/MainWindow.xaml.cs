@@ -29,6 +29,7 @@ namespace _30._2_
         // database
         public string typeOfEmployee = "";
         List<Werknemer> werknemerList = new List<Werknemer>();
+        List<Werknemer> sortedList = new List<Werknemer>();
         public MainWindow()
         {
 
@@ -60,7 +61,15 @@ namespace _30._2_
             //werknemerList.Add(w);
             //lvDisplayWerknemer.Items.Add(a.GetDisplayText("\t"));
             // Maak na toevoegen de invoervelden leeg
-            lvDisplayWerknemer.Items.Add(werknemerList.Last().GetDisplayText("\t"));
+            sortedList = werknemerList;
+            sortedList.Sort(new NameComparer());
+            lvDisplayWerknemer.Items.Clear();
+            foreach(Werknemer w in sortedList)
+            {
+                lvDisplayWerknemer.Items.Add(w.GetDisplayText("\t\t"));
+            }
+            
+            //lvDisplayWerknemer.Items.Add(werknemerList.Last().GetDisplayText("\t");
             ClearInputFields();
         }
 
@@ -208,6 +217,12 @@ namespace _30._2_
             //MessageBox.Show("uurwerker");
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e) { }
+        private void Window_Loaded(object sender, RoutedEventArgs e) 
+        {
+            rbtnCommissiewerker.IsChecked= true;
+            rbtnSortByNaam.IsChecked= true;
+
+
+        }
     }
 }

@@ -68,7 +68,7 @@ namespace _30._2_
         public string GetDisplayText(string sep)
         {
             return Achternaam + sep + Voornaam + sep +
-            Verdiensten.ToString("0.00") + sep + WerknemerType + Environment.NewLine;
+            ((Verdiensten*Aantal)+Commissie).ToString("0.00") + sep + WerknemerType + Environment.NewLine;
         }
         //method overloading
         public string GetDisplayText()
