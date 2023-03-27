@@ -52,8 +52,8 @@
         
         <ListView FontSize="20" Name="lvDisplayWerknemer" Grid.Row="6" Grid.ColumnSpan="3" BorderBrush="Gray" HorizontalAlignment="Stretch" SelectionMode="Single" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.RowSpan="3">
-            <RadioButton x:Name="rbtnSortByNaam" Content="volgens Naam" FontSize="20" Grid.Row="7" Grid.ColumnSpan="3" Margin="5"/>
-            <RadioButton x:Name="rbtnSortByVerdiensten" Content="volgens Verdiensten" FontSize="20" Grid.Row="7" Grid.ColumnSpan="3" Margin="5"/>
+            <RadioButton x:Name="rbtnSortByNaam" Content="volgens Naam" FontSize="20" Grid.Row="7" Grid.ColumnSpan="3" Margin="5" GroupName="sortMethod" Checked="rbtnSortByNaam_Checked"/>
+            <RadioButton x:Name="rbtnSortByVerdiensten" Content="volgens Verdiensten" FontSize="20" Grid.Row="7" Grid.ColumnSpan="3" Margin="5" GroupName="sortMethod" Checked="rbtnSortByVerdiensten_Checked" />
         </StackPanel>
         
     </Grid>
